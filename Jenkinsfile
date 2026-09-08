@@ -48,7 +48,7 @@ pipeline {
         stage('Update GitOps Deployment') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'github-creds',
+                    credentialsId: 'github-gitops',
                     usernameVariable: 'GIT_USERNAME',
                     passwordVariable: 'GIT_PASSWORD'
                 )]) {
